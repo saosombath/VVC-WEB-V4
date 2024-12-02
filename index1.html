@@ -184,6 +184,23 @@
   </style>
 </head>
 <body>
+<!--   pop up  -->
+  <div class="modal fade" id="autoPopupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Welcome!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        This is an auto popup modal that appears after 3 seconds and closes after 5 seconds.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- Navbar -->
   <div class="main-header">
   <nav class="navbar navbar-expand-lg navbar-custom shadow-lg mb-5">
@@ -314,6 +331,20 @@ ScrollReveal().reveal(".f-boks", {
   ...scrollRevealOption,
   delay: 700,
 });
+      document.addEventListener("DOMContentLoaded", function () {
+    const modalElement = document.getElementById('autoPopupModal');
+    const modal = new bootstrap.Modal(modalElement);
+
+    // Show the modal after 3 seconds
+    setTimeout(function () {
+      modal.show();
+
+      // Auto close the modal after 5 seconds
+      setTimeout(function () {
+        modal.hide();
+      }, 5000); // 5 seconds
+    }, 100); // 3 seconds
+  });
   </script>
 </body>
 </html>
