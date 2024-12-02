@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR App Interface</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+  <link rel="stylesheet" href="/node_modules/bootstrap-icons/icons/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+      .swiper {
+      width: 90%;
+      top: -2rem;
+      position: relative;
+      height: 70vh; /* Adjust height */
+    }
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      color: #fff;
+      background-size: cover;
+      background-position: center;
+    }
+    @media (max-width: 768px) {
+      .swiper {
+        position: relative;
+        top: -2.7rem;
+        width: 94%;
+        border-radius: 10px;
+        height: 35vh; /* Adjust height for smaller devices */
+      }
+      .bottom-menu{
+        left: 0;
+      }
+      .menu-card{
+        position: relative;
+        top: -5rem;
+      }
+      .main-menu{
+        position: relative;
+        top: -4rem;
+      }
+      .navbar-brand img{
+        text-align: center;
+        position: relative;
+        left: 40%;
+        align-items: center;
+      }
+      .btn{
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        left: 180%;
+        color: white;
+      }
+      .mes{
+        width: 5%;
+        position: relative;
+        left: 0;
+        top: 5rem;
+      }
+    }
+    /* computer */
+    .main-menu{
+      top: 3rem;
+      position: relative;
+    }
+    .menu-card{
+      position: relative;
+      top: -4rem;
+    }
+    .navbar-custom {
+      background-color: #050049;
+      position: fixed;
+    }
+
+    .menu-icon {
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .list-group-item {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+    }
+
+    .list-group-item i {
+      font-size: 1.5rem;
+      margin-right: 10px;
+    }
+    .list-group-item i:hover{
+      color: blue;
+      transform: scale(1.1);
+    }
+    .list-group a:hover{
+      color: blue;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      height: 80px;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .bottom-nav a {
+      color: #6c757d;
+      position: relative;
+      font-size: 1.2rem;
+      padding: 20px 30px 0 0;
+      height: 20vh;
+      top: -1rem;
+      text-decoration: none;
+
+    }
+
+    .bottom-nav .active {
+      color: #b08a29;
+    }
+    .navbar-brand img{
+      text-decoration: none;
+      width: 200px;
+      text-align: center;
+      align-items: center;
+      position: relative;
+    }
+    .navbar-toggler{
+      background: none;
+    }
+    .menu-card {
+      border-radius: 15px;
+      text-decoration: none;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      height: 150px;
+      display: flex;
+      right: 0;
+      left: 0;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .menu-card a{
+      text-decoration: none;
+      color: white;
+    }
+    .menu-card a:hover{
+      transform: scale(1.1);
+      transition: all 0.5s ease;
+    }
+
+    .menu-card i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .bottom-menu {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+      display: flex;
+      left: 0;
+      justify-content: space-around;
+      padding: 25px 0;
+    }
+
+    .bottom-menu a {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    .bottom-menu a:hover {
+      color: #0056b3;
+    }
+    .swiper-slide{
+      border-radius: 5px;
+    }
+    textarea {
+      width: 100%; /* Adjust width as needed */
+      min-height: 50px; /* Set a minimum height */
+      overflow: hidden; /* Hide scrollbars */
+      resize: none; /* Disable manual resizing */
+    }
+    #form{
+      width: 90%;
+    }
+    .btn{
+      color: white;
+    }
+    .btn:hover{
+       color: rgb(253, 232, 36);
+}
+.main-header{
+      position: relative;
+      top: 9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="main-header">
+  <nav class="navbar navbar-expand-lg navbar-custom shadow-lg mb-5">
+    <div class="container-fluid text-decoration-none">
+      <a href="index.html"><span class="navbar-brand text-white text-decoration-none"><img src="https://i.ibb.co/HTksMQd/Logo-Van-Van-2.png" alt=""></span></a>
+    </button>
+    <a href="index.html"><button id="logout"><i class="fa-solid fa-right-from-bracket"></i></button></a>
+    </div>
+  </nav>
+
+  <section class="hero is-bold container">
+    <div class="hero-body">
+      <div class="container mt-6">
+        <h1 class="daily-report text-black">របាយការណ៍ប្រចាំថ្ងៃ</h1>
+      </div>
+    </div>
+  </section>
+  <form id="form" class="container pl-4 main-form card bg-white text-white shadow p-2 mb-2" method="POST">
+      <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input
+              class="input"
+              type="email"
+              placeholder="Your Email"
+              name="Email"
+            />
+          </div>
+        </div>
+    <div class="field">
+      <label class="label">ឈ្មោះ</label>
+      <div class="control">
+        <input
+          class="input"
+          type="text"
+          placeholder="Name"
+          name="Name"
+        />
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">បុគ្គលិកផ្នែក</label>
+      <div class="control">
+        <input
+          class="input"
+          type="text"
+          placeholder="Position"
+          name="Position"
+        />
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">ថ្ងៃខែឆ្នាំ</label>
+      <div class="control">
+        <input
+          class="input"
+          type="date"
+          placeholder="Your Date of Birth"
+          name="Date"
+        />
+      </div>
+    </div>
+    <div class="field">
+      <div class="control">
+      <label class="label">របាយការពេលល្ងាច</label>
+        <textarea oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px';" placeholder="សរសេររបាយការណ៍របស់អ្នក" name="Content"></textarea>
+      </div>
+      </div>
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button bg-primary btn" type="submit" id="submit-button">
+          បញ្ជូន
+      </div>
+    </div>
+  </div>
+    <div class="mes"
+      id="message"
+      style="
+        display: none;
+        position: relative;
+        margin: 20px;
+        top: -4rem;
+        width: 35%;
+        left: 6rem;
+        font-weight: bold;
+        color: green;
+        padding: 8px;
+        background-color: beige;
+        border-radius: 4px;
+        border-color: aquamarine;
+      "></div>
+  </div>
+  </form>
+    <!-- Bottom Navigation -->
+<!--     <div class="bottom-menu">
+      <a href="index1.html"><i class="fa-solid fa-house"></i></a>
+      <a href="#"><i class="bi bi-chat-dots-fill"></i></a>
+      <a href="#"><i class="fa-solid fa-people-group"></i></a>
+    </div> -->
+
+  <script>
+    document.getElementById("form").addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent the default form submission
+      document.getElementById("message").textContent = "កំពុងបញ្ជូន";
+      document.getElementById("message").style.display = "block";
+      document.getElementById("submit-button").disabled = true;
+
+      // Collect the form data
+      var formData = new FormData(this);
+      var keyValuePairs = [];
+      for (var pair of formData.entries()) {
+        keyValuePairs.push(pair[0] + "=" + pair[1]);
+      }
+
+      var formDataString = keyValuePairs.join("&");
+
+      // Send a POST request to your Google Apps Script
+      fetch(
+        "https://script.google.com/macros/s/AKfycbxebdv3IG9m2k_fTvAOwcuvGX4Rn_crBTaWNSC9Jq1H2AFhyZh-0S3AuH-RcDThcT1A/exec",
+        {
+          redirect: "follow",
+          method: "POST",
+          body: formDataString,
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8",
+          },
+        }
+      )
+        .then(function (response) {
+          // Check if the request was successful
+          if (response) {
+            return response; // Assuming your script returns JSON response
+          } else {
+            throw new Error("Failed to submit the form.");
+          }
+        })
+        .then(function (data) {
+          // Display a success message
+          document.getElementById("message").textContent =
+            "បានបញ្ជូនរួចរាល់";
+          document.getElementById("message").style.display = "flex";
+          document.getElementById("message").style.backgroundColor = "green";
+          document.getElementById("message").style.color = "beige";
+          document.getElementById("submit-button").disabled = false;
+          document.getElementById("form").reset();
+
+          setTimeout(function () {
+            document.getElementById("message").textContent = "";
+            document.getElementById("message").style.display = "none";
+          }, 2600);
+        })
+        .catch(function (error) {
+          // Handle errors, you can display an error message here
+          console.error(error);
+          document.getElementById("message").textContent =
+            "An error occurred while submitting the form.";
+          document.getElementById("message").style.display = "block";
+        });
+    });
+    const scrollRevealOption = {
+  origin: "bottom",
+  distance: "10px",
+  duration: 1000,
+};
+
+ScrollReveal().reveal(".navbar", {
+  ...scrollRevealOption,
+  origin: "bottom",
+});
+ScrollReveal().reveal(".daily-report", {
+  ...scrollRevealOption,
+  delay: 400,
+});
+ScrollReveal().reveal("#form", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+ScrollReveal().reveal(".f-boks", {
+  ...scrollRevealOption,
+  delay: 700,
+});
+const textareas = document.querySelectorAll('textarea');
+
+textareas.forEach((textarea) => {
+  textarea.addEventListener('input', () => {
+    textarea.style.height = 'auto'; // Reset height
+    textarea.style.height = textarea.scrollHeight + 'px'; // Adjust height
+  });
+});
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+</body>
+</html>

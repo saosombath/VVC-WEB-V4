@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR App Interface</title>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap-icons/icons/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    .swiper {
+      width: 90%;
+      top: -2rem;
+      position: relative;
+      height: 70vh; /* Adjust height */
+    }
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      color: #fff;
+      background-size: cover;
+      background-position: center;
+    }
+    @media (max-width: 768px) {
+      .swiper {
+        position: relative;
+        top: -2.7rem;
+        width: 94%;
+        border-radius: 10px;
+        height: 35vh; /* Adjust height for smaller devices */
+      }
+      .bottom-menu{
+        left: 0;
+        position: fixed;
+        width: 50%;
+      }
+      .menu-card{
+        position: relative;
+        top: -5rem;
+      }
+      .main-menu{
+        position: relative;
+        top: -4rem;
+      }
+      .navbar-brand img{
+        text-align: center;
+        position: relative;
+        left: 40%;
+        align-items: center;
+      }
+    }
+    /* computer */
+    .main-menu{
+      top: -3rem;
+      position: relative;
+    }
+    .menu-card{
+      position: relative;
+      top: -4rem;
+    }
+    .navbar-custom {
+      background-color: #050049;
+      position: fixed;
+    }
+
+    .menu-icon {
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .list-group-item {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+    }
+
+    .list-group-item i {
+      font-size: 1.5rem;
+      margin-right: 10px;
+    }
+    .list-group-item i:hover{
+      color: blue;
+      transform: scale(1.1);
+    }
+    .list-group a:hover{
+      color: blue;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      height: 80px;
+      bottom: 0;
+      width: 100%;
+      top:-2rem
+    }
+
+    .bottom-nav a {
+      color: #6c757d;
+      position: relative;
+      font-size: 1.2rem;
+      padding: 20px 30px 0 0;
+      height: 20vh;
+      top: -1rem;
+      text-decoration: none;
+
+    }
+
+    .bottom-nav .active {
+      color: #b08a29;
+    }
+    .navbar-brand img{
+      text-decoration: none;
+      width: 200px;
+      text-align: center;
+      align-items: center;
+      position: relative;
+    }
+    .navbar-toggler{
+      background: none;
+    }
+    .menu-card {
+      border-radius: 15px;
+      text-decoration: none;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .menu-card a{
+      text-decoration: none;
+      color: white;
+    }
+    .menu-card a:hover{
+      transform: scale(1.1);
+      transition: all 0.5s ease;
+    }
+
+    .menu-card i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .bottom-menu {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+      display: flex;
+      left: 0;
+      justify-content: space-around;
+      padding: 25px 0;
+    }
+
+    .bottom-menu a {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    .bottom-menu a:hover {
+      color: #0056b3;
+    }
+    .swiper-slide{
+      border-radius: 5px;
+    }
+    .main-header{
+      position: relative;
+      top: 9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="main-header">
+  <nav class="navbar navbar-expand-lg navbar-custom shadow-lg mb-5">
+    <div class="container-fluid text-decoration-none">
+      <a href="index.html"><span class="navbar-brand text-white text-decoration-none"><img src="https://i.ibb.co/HTksMQd/Logo-Van-Van-2.png" alt=""></span></a>
+    </button>
+    <a href="index.html"><button id="logout"><i class="fa-solid fa-right-from-bracket"></i></button></a>
+    </div>
+  </nav>
+  
+  <!-- Swiper Section -->
+  <div class="swiper mySwiper shadow p-2 mb-2 rounded">
+    <div class="swiper-wrapper ">
+      <!-- Slide 1 -->
+      <div class="swiper-slide" style="background-image: url('https://i.ibb.co/j5D6MfT/photo-2024-09-28-10-38-55.jpg');">
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide" style="background-image: url('https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-autumn-nature-with-trees-of-yellow-leaves-free-image.jpeg?w=600&quality=80');">
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide" style="background-image: url('https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg');">
+      </div>
+      <!-- Slide 4 -->
+      <div class="swiper-slide" style="background-image: url('https://via.placeholder.com/1920x1080/999');">
+      </div>
+    </div>
+    <!-- Swiper Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Swiper Navigation -->
+    <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> -->
+  </div>
+  <!-- Main Content -->
+  <!-- <div class="container mt-3 sub-title" id="navbarNav"> -->
+</head>
+<body>
+  <div class="container py-4" id="animation">
+    <div class="d-flex justify-content-between align-items-center mb-4 main-menu">
+      <h3>Main Menu</h3>
+      <a href="#" class="text-primary">See All</a>
+    </div>
+    <div class="row g-3">
+      <div class="col-6">
+        <div class="menu-card bg-info shadow p-2 mb-2">
+          <a href="index4.html"><i class="bi bi-calendar-check"></i></i></a>
+          <a href="index4.html">របាយការណ៍ប្រចាំថ្ងៃ</a>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="menu-card bg-warning shadow p-2 mb-2">
+          <a href="index2.html"><i class="fa-solid fa-file-pen"></i></a>
+          <a href="index2.html">ការស្នើរសុំផ្សេងៗ</a>
+        </div>
+      </div>
+      <div class="col-6 ">
+        <div class="menu-card bg-danger shadow p-2 mb-2">
+          <a href=""><i class="fa-solid fa-bullseye"></i></a>
+          <a href="">លិខិតបញ្ជាបេសកម្ម</a>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="menu-card bg-success shadow p-2 mb-2">
+          <a href=""><i class="bi bi-file-earmark-person"></i></a>
+          <a href="">ព័ត៌មានបុគ្គលិក</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="bottom-menu">
+    <a href="#"><i class="fa-solid fa-house"></i></a>
+    <a href="#"><i class="bi bi-chat-dots-fill"></i></a>
+    <a href="#"><i class="fa-solid fa-people-group"></i></a>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button -prev',
+      },
+      breakpoints: {
+        320: { // Mobile screens
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        768: { // Tablet screens
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: { // Desktop screens
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+      },
+    });
+    const scrollRevealOption = {
+  origin: "bottom",
+  distance: "10px",
+  duration: 1000,
+};
+
+ScrollReveal().reveal(".swiper", {
+  ...scrollRevealOption,
+  origin: "bottom",
+});
+ScrollReveal().reveal("#animation", {
+  ...scrollRevealOption,
+  delay: 400,
+});
+ScrollReveal().reveal(".boks", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+ScrollReveal().reveal(".f-boks", {
+  ...scrollRevealOption,
+  delay: 700,
+});
+  </script>
+</body>
+</html>
