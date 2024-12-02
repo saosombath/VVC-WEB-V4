@@ -10,16 +10,6 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-    <!-- Loading Spinner -->
-<div class="d-flex justify-content-center align-items-center vh-100">
-  <!-- <div class="spinner-border text-primary" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div> -->
-  <div class="d-flex justify-content-center align-items-center vh-100 loading">
-    <img src="https://i.ibb.co/qMzCyM6/Logo-Van-Van-1.png" alt="Loading..." class="img-fluid">
-  </div>
-  
-</div>
     <div class="container" id="signup" style="display:none;">
       <h1 class="form-title">Register</h1>
       <form method="post" action="">
@@ -115,11 +105,6 @@
   ScrollReveal().reveal(".f-boks", {
     ...scrollRevealOption,
     delay: 700,
-  });
-            document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(() => {
-      document.querySelector(".img-fluid").style.display = "none"; // Hide the spinner
-    }, 100); // 3 seconds
   });
       </script>
 </body>
