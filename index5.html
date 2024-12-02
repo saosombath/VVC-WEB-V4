@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style1.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="/node_modules/bootstrap-icons/icons/">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>
@@ -208,9 +209,186 @@
     .btn:hover{
        color: rgb(253, 232, 36);
 }
-.main-header{
+    .form-container {
+      max-width: 500px;
+      height: 200vh;
+      margin: 50px auto;
+      padding: 20px;
+      background-image:url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnIybjl2cnZidmpxMjR1bzF6dHpnYnB3ZGo5b3E5bGNwcnlraXhoNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/neFXKaex4JLRu592kL/giphy.webp) ;
+      background-repeat: no-repeat;
+      width: 100%;
+      background-size: cover;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      font-weight: 500;
+      font-family: Kh Battambang;
+    }
+    @media (max-width: 768px){
+      .form-container {
+      max-width: 400px;
+      height: 150vh;
+      margin: 50px auto;
+      padding: 20px;
+      background-image:url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnIybjl2cnZidmpxMjR1bzF6dHpnYnB3ZGo5b3E5bGNwcnlraXhoNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/neFXKaex4JLRu592kL/giphy.webp) ;
+      background-repeat: no-repeat;
+      width: 100%;
+      background-size: cover;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      font-weight: 500;
+      font-family: Kh Battambang;
+    }
+    .btn-custom {
+      background-color: #007bff;
+      color: #fff;
       position: relative;
-      top: 9rem;
+      left: 0;
+    }
+    .Quantity{
+        position: relative;
+        left: 110px;
+    }
+    #itemQuantity{
+        width: 60%;
+        position: relative;
+        left: 110px;
+    }
+   
+    .price{
+        position: relative;
+        left: 60px;
+    }
+    #price{
+        width: 60%;
+        position: relative;
+        left: 60px;
+    }
+    #ItemName{
+        position: relative;
+        width: 165%;
+    }
+    .Item1{
+        position: relative;
+        display: inline-flex;
+    }
+    .Item2{
+        position: relative;
+        top: -1rem;
+    }
+    .Item3{
+        position: relative;
+        top: -2rem;
+    }
+    .Item4{
+        position: relative;
+        top: -2.5rem;
+    }
+    .Item5{
+        position: relative;
+        top: -4rem;
+    }
+  }
+    .btn-custom {
+      background-color: #007bff;
+      color: #fff;
+      position: relative;
+      top: -2rem;
+    }
+    .btn-custom:hover {
+      background-color: #0056b3;
+    }
+    .main-header{
+        width: 100%;
+    }
+    .img img{
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+    .form-label{
+        position: relative;
+        top: 0.3rem;
+    }
+    .text1{
+        position: relative;
+        top: -0.5rem;
+    }
+    .text2{
+        position: relative;
+        top: 0.5rem;
+
+    }
+    .Quantity{
+        position: relative;
+        left: 110px;
+    }
+    #itemQuantity{
+        width: 60%;
+        position: relative;
+        left: 110px;
+    }
+   
+    .price{
+        position: relative;
+        left: 60px;
+    }
+    #price{
+        width: 60%;
+        position: relative;
+        left: 60px;
+    }
+    #ItemName{
+        position: relative;
+        width: 165%;
+    }
+    .Item2{
+        position: relative;
+        top: -1rem;
+    }
+    .Item3{
+        position: relative;
+        top: -2rem;
+    }
+    .Item4{
+        position: relative;
+        top: -2.5rem;
+    }
+    .Item5{
+        position: relative;
+        top: -4rem;
+    }
+    
+    .Words{
+        position: relative;
+        top: -4rem;
+    }
+    .Upload{
+        position: relative;
+        top: -3rem;
+    }
+    button{
+        position: relative;
+        top: -2rem;
+    }
+    .main-header1{
+      position: relative;
+      top: 4rem;
+    }
+    #Position{
+      position: relative;
+      width: 95%;
+      
+    }
+    #number{
+      position: relative;
+      width: 78%;
+      
+    }
+    #date{
+      position: relative;
+      width: 125%;
+      left: -2.6rem;
+      
     }
   </style>
 </head>
@@ -221,74 +399,335 @@
     <div class="container-fluid text-decoration-none">
       <a href="index.html"><span class="navbar-brand text-white text-decoration-none"><img src="https://i.ibb.co/HTksMQd/Logo-Van-Van-2.png" alt=""></span></a>
     </button>
-    <a href="index.html"><button id="logout"><i class="fa-solid fa-right-from-bracket"></i></button></a>
+    <a href="index1.html"><button id="logout"><i class="fa-solid fa-right-from-bracket"></i></button></a>
     </div>
   </nav>
-
-  <section class="hero is-bold container">
-    <div class="hero-body">
-      <div class="container mt-6">
-        <h1 class="daily-report text-black">របាយការណ៍ប្រចាំថ្ងៃ</h1>
-      </div>
-    </div>
-  </section>
-  <form id="form" class="container pl-4 main-form card bg-white text-white shadow p-2 mb-2" method="POST">
-      <div class="field">
-          <label class="label">Email</label>
-          <div class="control">
-            <input
-              class="input"
-              type="email"
-              placeholder="Your Email"
-              name="Email"
-            />
-          </div>
-        </div>
-    <div class="field">
-      <label class="label">ឈ្មោះ</label>
-      <div class="control">
+<form id="form" class="container pl-4" method="POST">
+  <div class="form-container main-header1">
+    <h3 class="text-center">ស្នើរសុំសម្ភារៈ</h3>
+      <div class="d-flex gap-5">
+        <div class="mb-3 main-header " >
+        <label for="itemName" class="form-label">លេខប័ណ្ណ/Number</label>
         <input
-          class="input"
           type="text"
-          placeholder="Name"
-          name="Name"
-        />
+          class="form-control"
+          id="number"
+          placeholder="Number" name="លេខប័ណ្ណ/Number"
+          required />
       </div>
-    </div>
-    <div class="field">
-      <label class="label">បុគ្គលិកផ្នែក</label>
-      <div class="control">
+      <div> 
+        <label for="date" class="form-label">ថៃ្ងសើ្នសុំ/Request Date</label>
         <input
-          class="input"
-          type="text"
-          placeholder="Position"
-          name="Position"
-        />
-      </div>
-    </div>
-    <div class="field">
-      <label class="label">ថ្ងៃខែឆ្នាំ</label>
-      <div class="control">
-        <input
-          class="input"
           type="date"
-          placeholder="Your Date of Birth"
-          name="Date"
+          class="form-control"
+          id="date"
+          placeholder="Number" name="ថៃ្ងសើ្នសុំ/Request Date"
+          required
         />
       </div>
     </div>
-    <div class="field">
-      <div class="control">
-      <label class="label">របាយការពេលល្ងាច</label>
-        <textarea oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px';" placeholder="សរសេររបាយការណ៍របស់អ្នក" name="Content"></textarea>
+     <div class="control">
+      <div class="text1">
+        <label for="name" class="form-label">ឈ្មោះអ្នកសើ្នសុំ/Request Person</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="name" name="ឈ្មោះអ្នកសើ្នសុំ/Request Person"
+          required
+        />
       </div>
+      <div class="d-flex gap-5">
+      <div>
+        <label for="Position" class="form-label main-header">មុខតំណែង/Position</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Position"
+          placeholder="Position" name="មុខតំណែង/Position"
+          required
+        />
       </div>
-    <div class="field is-grouped">
-      <div class="control">
-        <button class="button bg-primary btn" type="submit" id="submit-button">
-          បញ្ជូន
+      <div>
+        <label for="Department" class="form-label main-header">ផែ្នក/Department</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Department"
+          placeholder="Department"
+          required
+        />
       </div>
     </div>
+      <div>
+        <label for="Projec" class="form-label">កូដគំរោង/Project</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Project"
+          placeholder="Project" name="កូដគំរោង/Project"
+          required
+        />
+      </div>
+      <div>
+        <label for="RequiredDate" class="form-label">ថៃ្ងចង់បាន/Required Date</label>
+        <input
+          type="date"
+          class="form-control"
+          id="RequiredDate"
+          placeholder="RequiredDate" name="ថៃ្ងចង់បាន/Required Date"
+          required
+        />
+      </div>
+      <div class="text2">
+        <label for="Deadline" class="form-label">ថៃ្ងផុតកំណត់ការទូទាត់បុរេប្រទាន/Advance Clearance Deadline</label>
+        <input
+          type="date"
+          class="form-control"
+          id="Deadline"
+          placeholder="ថៃ្ងផុតកំណត់ការទូទាត់បុរេប្រទាន" name="ថៃ្ងផុតកំណត់ការទូទាត់បុរេប្រទាន/Advance Clearance Deadline"
+          required
+        />
+      </div>
+      <!-- Item1 -->
+      <div class="Item1 d-flex gap-1">
+      <div class="text2">
+        <label for="ItemName" class="form-label">Item Name 1</label>
+        <input
+          type="text"
+          class="form-control"
+          id="ItemName"
+          placeholder="Product Name" name="Item Name1"
+          required
+        />
+      </div>
+      <div class=" d-flex gap-3 ">
+      <div class="mb-3 text2">
+        <label for="itemQuantity" class="form-label Quantity">Quantity 1</label>
+        <input
+          type="number"
+          class="form-control"
+          id="itemQuantity"
+          placeholder="Enter quantity" name="Quantity1"
+          required
+          min="1"
+        />
+        
+      </div>
+      
+      <div class="mb-3 mt-2">
+        <label for="price" class="form-label price">Price 1</label>
+        <input
+          type="number"
+          class="form-control"
+          id="price"
+          placeholder="Enter price" name="Price1"
+          min="0"
+          step="0.01"
+          required
+        />
+      </div>
+    </div>
+    </div>
+     <!-- Item2 -->
+      <div class="Item2 d-flex gap-1">
+      <div class="text2">
+        <label for="ItemName" class="form-label">Item Name 2</label>
+        <input
+          type="text"
+          class="form-control"
+          id="ItemName"
+          placeholder="Product Name" name="Item Name2"
+          required
+        />
+      </div>
+      <div class=" d-flex gap-3">
+      <div class="mb-3 text2">
+        <label for="itemQuantity" class="form-label Quantity">Quantity 2</label>
+        <input
+          type="number"
+          class="form-control"
+          id="itemQuantity"
+          placeholder="Enter quantity" name="Quantity2"
+          required
+          min="1"
+        />
+        
+      </div>
+      
+      <div class="mb-3 mt-2">
+        <label for="price" class="form-label price">Price 2</label>
+        <input
+          type="number"
+          class="form-control"
+          id="price"
+          placeholder="Enter price" name="Price2"
+          min="0"
+          step="0.01"
+          required
+        />
+      </div>
+    </div>
+    </div>
+    <!-- ---------- -->
+     <!-- Item3 -->
+      <div class="Item3 d-flex gap-1">
+      <div class="text2">
+        <label for="ItemName" class="form-label">Item Name 3</label>
+        <input
+          type="text"
+          class="form-control"
+          id="ItemName"
+          placeholder="Product Name" name="Item Name3"
+          required
+        />
+      </div>
+      <div class=" d-flex gap-3">
+      <div class="mb-3 text2">
+        <label for="itemQuantity" class="form-label Quantity">Quantity 3</label>
+        <input
+          type="number"
+          class="form-control"
+          id="itemQuantity"
+          placeholder="Enter quantity" name="Quantity3"
+          required
+          min="1"
+        />
+        
+      </div>
+      
+      <div class="mb-3 mt-2">
+        <label for="price" class="form-label price">Price 3</label>
+        <input
+          type="number"
+          class="form-control"
+          id="price"
+          placeholder="Enter price" name="Price3"
+          min="0"
+          step="0.01"
+          required
+        />
+      </div>
+    </div>
+    </div>
+    <!-- ---------- -->
+     <!-- Item4 -->
+      <div class="Item4 d-flex gap-1">
+      <div class="text4">
+        <label for="ItemName" class="form-label">Item Name 4</label>
+        <input
+          type="text"
+          class="form-control"
+          id="ItemName"
+          placeholder="Product Name" name="Item Name4"
+          required
+        />
+      </div>
+      <div class=" d-flex gap-3">
+      <div class="mb-3 text2">
+        <label for="itemQuantity" class="form-label Quantity ">Quantity 4</label>
+        <input
+          type="number"
+          class="form-control"
+          id="itemQuantity"
+          placeholder="Enter quantity" name="Quantity4"
+          required
+          min="1"
+        />
+        
+      </div>
+      
+      <div class="mb-3 mt-2">
+        <label for="price" class="form-label price">Price 4</label>
+        <input
+          type="number"
+          class="form-control"
+          id="price"
+          placeholder="Enter price" name="Price4"
+          min="0"
+          step="0.01"
+          required
+        />
+      </div>
+    
+    </div>
+    </div>
+    <!-- ---------- -->
+     <!-- Item5 -->
+      <div class="Item5 d-flex gap-1">
+      <div class="text2">
+        <label for="ItemName" class="form-label">Item Name 5</label>
+        <input
+          type="text"
+          class="form-control"
+          id="ItemName"
+          placeholder="Product Name" name="Item Name5"
+          required
+        />
+      </div>
+      <div class=" d-flex gap-3">
+      <div class="mb-3 text2">
+        <label for="itemQuantity" class="form-label Quantity">Quantity 5</label>
+        <input
+          type="number"
+          class="form-control"
+          id="itemQuantity"
+          placeholder="Enter quantity" name="Quantity5"
+          required
+          min="1"
+        />
+        
+      </div>
+      
+      <div class="mb-3 mt-2">
+        <label for="price" class="form-label price">Price 5</label>
+        <input
+          type="number"
+          class="form-control"
+          id="price"
+          placeholder="Enter price" name="Price5"
+          min="0"
+          step="0.01"
+          required
+        />
+      </div>
+    </div>
+    </div>
+    <!-- ---------- -->
+      <div class="text1 Words">
+        <label for="InWords" class="form-label">ជាអក្សរ/In Words</label>
+        <input
+          type="text"
+          class="form-control"
+          id="InWords"
+          placeholder="ជាអក្សរ/In Words" name="ជាអក្សរ/In Words"
+          required
+        />
+      </div>
+      <!-- <div class="mb-3">
+        <label for="priority" class="form-label">មុខតំណែង/Position</label>
+        <select class="form-select" id="priority" required>
+          <option value="" selected disabled>ជ្រើសរើសមុខតំណែង</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div> -->
+     
+      <div class="mb-3 Upload">
+        <label for="imageUpload" class="form-label">Upload link Image attached</label>
+        <input
+          type="url"
+          class="form-control"
+          id="imageUpload"
+          accept="image/jpg" name="Upload Image"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-custom align-content-center" id="submit-button">Submit Request</button>
+      <div id="result" class="alert alert-success mt-3 d-none"></div>
+
+  </div>
   </div>
     <div class="mes"
       id="message"
@@ -333,7 +772,7 @@
 
       // Send a POST request to your Google Apps Script
       fetch(
-        "https://script.google.com/macros/s/AKfycbxebdv3IG9m2k_fTvAOwcuvGX4Rn_crBTaWNSC9Jq1H2AFhyZh-0S3AuH-RcDThcT1A/exec",
+        "https://script.google.com/macros/s/AKfycbzO9CMMwerhl0gJLijtwZTRgKKowNu7tp2JPfrAN9oCGuJppTz5LKenim6bwFWFs_iL/exec",
         {
           redirect: "follow",
           method: "POST",
