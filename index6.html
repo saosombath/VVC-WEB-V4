@@ -247,9 +247,13 @@
     .play-button {
       margin-top: 10px;
     }
+    #meetingList{
+      position: relative;
+      top:7rem;
+    }
     .main-meeting{
       position: relative;
-      top:30rem;
+      top:4rem;
     }
   </style>
 </head>
@@ -267,7 +271,7 @@
   <h3>List Meetings</h3>
 
   <!-- Sorting Dropdown -->
-  <div class="mb-3">
+  <div class="mb-3 main-meeting">
     <label for="sortBy" class="form-label">Sort By</label>
     <select class="form-select" id="sortBy" onchange="sortMeetings()">
       <option value="date-asc">A-Z</option>
