@@ -402,15 +402,24 @@
     }
     #date{
       position: relative;
-      width: 125%;
-      left: -2.6rem;
+      width: 115%;
+      left: -1.6rem;
+      
+    }
+    .date1{
+      position: relative;
+      width: 115%;
+      left: -1.6rem;
       
     }
     .image{
       position: fixed;
+      background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnIybjl2cnZidmpxMjR1bzF6dHpnYnB3ZGo5b3E5bGNwcnlraXhoNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/neFXKaex4JLRu592kL/giphy.webp);
       top: 5rem;
+      background-repeat: no-repeat;
+      background-size: cover;
       width: 100%;
-      background-position: center;
+      height: 100%;
     }
     .Q4{
       position: relative;
@@ -421,7 +430,6 @@
 <body>
   <!-- Navbar -->
   <div class="image">
-    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnIybjl2cnZidmpxMjR1bzF6dHpnYnB3ZGo5b3E5bGNwcnlraXhoNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/neFXKaex4JLRu592kL/giphy.webp" alt="">
   </div>
   <div class="main-header">
   <nav class="navbar navbar-expand-lg navbar-custom shadow-lg mb-5">
@@ -445,7 +453,7 @@
           required />
       </div>
       <div> 
-        <label for="date" class="form-label">ថៃ្ងសើ្នសុំ</label>
+        <label for="date" class="form-label date1">ថៃ្ងសើ្នសុំ/Request Date</label>
         <input
           type="date"
           class="form-control"
