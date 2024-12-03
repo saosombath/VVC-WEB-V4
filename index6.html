@@ -66,133 +66,56 @@
       font-size: 1.5rem;
       color: white;
     }
-
-    .list-group-item {
-      display: flex;
-      align-items: center;
-      font-size: 1.2rem;
-    }
-
-    .list-group-item i {
-      font-size: 1.5rem;
-      margin-right: 10px;
-    }
-    .list-group-item i:hover{
-      color: blue;
-      transform: scale(1.1);
-    }
-    .list-group a:hover{
-      color: blue;
-    }
-
-    .bottom-nav {
-      position: fixed;
-      background-color: #ffffff;
-      border: 1px solid #ddd;
-      height: 80px;
-      bottom: 0;
-      width: 100%;
-    }
-
-    .bottom-nav a {
-      color: #6c757d;
-      position: relative;
-      font-size: 1.2rem;
-      padding: 20px 30px 0 0;
-      height: 20vh;
-      top: -1rem;
-      text-decoration: none;
-
-    }
-
-    .bottom-nav .active {
-      color: #b08a29;
-    }
-    .navbar-brand img{
-      text-decoration: none;
-      width: 200px;
-      text-align: center;
-      align-items: center;
-      position: relative;
-    }
-    .navbar-toggler{
-      background: none;
-    }
-    .menu-card {
-      border-radius: 15px;
-      text-decoration: none;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-weight: bold;
-      height: 150px;
-      display: flex;
-      right: 0;
-      left: 0;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-    .menu-card a{
-      text-decoration: none;
-      color: white;
-    }
-    .menu-card a:hover{
-      transform: scale(1.1);
-      transition: all 0.5s ease;
-    }
-
-    .menu-card i {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-
-    .bottom-menu {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: #fff;
-      border-top: 1px solid #ddd;
-      display: flex;
-      left: 0;
-      justify-content: space-around;
-      padding: 25px 0;
-    }
-
-    .bottom-menu a {
-      color: #007bff;
-      text-decoration: none;
-      font-size: 1.5rem;
-    }
-
-    .bottom-menu a:hover {
-      color: #0056b3;
-    }
-    .swiper-slide{
-      border-radius: 5px;
-    }
-    textarea {
-      width: 100%; /* Adjust width as needed */
-      min-height: 50px; /* Set a minimum height */
-      overflow: hidden; /* Hide scrollbars */
-      resize: none; /* Disable manual resizing */
-    }
-    #form{
-      width: 90%;
-    }
-    .btn{
-      color: white;
-    }
-    .btn:hover{
-       color: rgb(253, 232, 36);
-}
-        /* Adding box-shadow to the list group items */
-    .list-group-item {
+.list-group-item {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow effect */
       border-radius: 10px; /* Rounded corners */
       margin-bottom: 15px; /* Spacing between items */
       transition: box-shadow 0.3s ease-in-out; /* Smooth transition on hover */
     }
+    @media (min-width: 1024px){
+      #audioPlayer iframe{
+      width: 100%;
+      position: relative;
+      background: none;
+      border-radius: 5px;
+      height: 10vh;
+      left: 55%;
+      align-items: center;
+      text-align: center;
+      margin: auto;
+      border: none;
+      outline: none;
+    }
+
+    .play-button {
+      top: -2rem;
+      left: 57%;
+      position: relative;
+      justify-content: center;
+    }
+
+    } 
+    @media (max-width: 768px){
+      #audioPlayer iframe{
+      width: 100%;
+      position: relative;
+      background: none;
+      border-radius: 5px;
+      height: 5vh;
+      align-items: center;
+      text-align: center;
+      margin: auto;
+      border: none;
+      outline: none;
+    }
+
+    .play-button {
+      top: -2rem;
+      position: relative;
+      justify-content: center;
+    }
+
+    } 
 
     .list-group-item:hover {
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
@@ -242,10 +165,26 @@
     .audio-player {
       max-width: 500px;
       width: 100%;
+      text-align: center;
+      align-items: center;
+    }
+    #audioPlayer iframe{
+      width: 100%;
+      position: relative;
+      background: none;
+      border-radius: 5px;
+      height: 10vh;
+      align-items: center;
+      text-align: center;
+      margin: auto;
+      border: none;
+      outline: none;
     }
 
     .play-button {
-      margin-top: 10px;
+      top: -2rem;
+      position: relative;
+      justify-content: center;
     }
     #meetingList{
       position: relative;
@@ -267,11 +206,11 @@
     <a href="index1.html"><button id="logout"><i class="fa-solid fa-right-from-bracket"></i></button></a>
     </div>
   </nav>
-    div class="container mt-5 main-meeting">
+   <div class="container mt-5">
   <h3>List Meetings</h3>
 
   <!-- Sorting Dropdown -->
-  <div class="mb-3 main-meeting">
+  <div class="mb-3">
     <label for="sortBy" class="form-label">Sort By</label>
     <select class="form-select" id="sortBy" onchange="sortMeetings()">
       <option value="date-asc">A-Z</option>
@@ -284,31 +223,21 @@
   <!-- Meeting List -->
   <ul class="list-group" id="meetingList">
     <!-- Meeting 1 -->
-    <li class="list-group-item d-flex justify-content-between align-items-center meeting-card" data-date="2024-12-03" data-participants="50">
-      <div>
-        <h5>1 - ថ្ងៃចន្ទ ២កើត ខែមិគសិរ ឆ្នាំរោង ឆស័ក ព.ស ២៥៦៨</h5>
-        <p><strong></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ត្រូវនឹង ថ្ងៃទី២ ខែធ្នូ ឆ្នាំ២០២៤</p>
+    <li class="list-group-item d-block justify-content-between align-items-center text-center meeting-card" data-date="1" data-participants="50">
+      <div class="text-center">
+        <h5>1 - ការប្រជុំទូទៅជាមួយបុគ្គលិកកម្មករ CH1</h5>
+        <p><strong></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ថ្ងៃចន្ទ ២កើត ខែមិគសិរ ឆ្នាំរោង ឆស័ក ព.ស ២៥៦៨<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ត្រូវនឹង ថ្ងៃទី២ ខែធ្នូ ឆ្នាំ២០២៤</p>
         <div>
-            <img src="https://via.placeholder.com/150" alt="Meeting Image">
+            <img src="https://i.ibb.co/PWFmws6/image.png" alt="Meeting Image">
         </div>
       </div>
-      <div class="audio-player text-center">
-          <audio id="audioPlayer" controls preload="auto" style="width: 100%;">
-            <source src="ezyZip.m4a" type="audio/mpeg">
-            <source src="audio.ogg" type="audio/ogg">
-          </audio>
-          <button id="playButton" class="btn btn-primary play-button" onclick="playAudio()">ស្តាប់ការប្រជុំ</button>
+      <div class="audio-player text-center justify-content-center mt-5" id="audioPlayer">
+        <button id="playButton" class="btn btn-primary play-button text-center" onclick="playAudio()">សំឡេងប្រជុំ</button>
+          <iframe src="https://drive.google.com/file/d/1vPZ8pUIwobk54RLqD9-joYpPK1UAX0__/preview" style="background: none; border: none;"></iframe>
         </div>
     </li>
     
     <!-- Meeting 2 -->
-    <li class="list-group-item d-flex justify-content-between align-items-center meeting-card" data-date="2024-12-07" data-participants="100">
-      <div>
-        <h5>2 - ថ្ងៃចន្ទ ២កើត ខែមិគសិរ ឆ្នាំរោង ឆស័ក ព.ស ២៥៦៨</h5>
-        <p><strong></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ត្រូវនឹង ថ្ងៃទី២ ខែធ្នូ ឆ្នាំ២០២៤</p>
-        <img src="https://via.placeholder.com/150" alt="Meeting Image">
-    </div>
-    </li>
 
   </ul>
 </div>
