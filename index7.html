@@ -81,7 +81,7 @@
       position: relative;
       align-items: center;
       text-align: center;
-      top: 8rem;
+      top: 5rem;
     }
     .card-footer{
       position: relative;
@@ -97,6 +97,43 @@
       position: relative;
       justify-content: start;
     }
+    .cart-box {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      background: #f9f9f9;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    .cart-box:hover {
+      transform: translateY(-5px);
+    }
+    .cart-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .cart-title{
+      font-size: 1.1rem;
+      margin: 12px 0;
+      color: blue;
+      font-family: Kh Muol;
+    }
+    .text-title{
+      font-family: Kh Muol;
+      color: blue;
+      font-size: 20px;
+      position: relative;
+    }
+    .text-h5 a{
+      text-decoration: none;
+    }
+    .main-content{
+      position: relative;
+      top: 3rem;
+    }
   </style>
 </head>
 <body>
@@ -104,127 +141,74 @@
   <div class="main-header">
   <nav class="navbar navbar-expand-lg navbar-custom shadow-lg mb-5">
     <div class="container-fluid text-decoration-none">
-      <a href="index.html"><span class="navbar-brand text-white text-decoration-none"><img src="https://i.ibb.co/HTksMQd/Logo-Van-Van-2.png" alt=""></span></a>
+      <a href="index1.html"><span class="navbar-brand text-white text-decoration-none"><img src="https://i.ibb.co/HTksMQd/Logo-Van-Van-2.png" alt=""></span></a>
     </button>
     <a href="index1.html"><button id="logout"><i class="fa-solid fa-right-from-bracket"></i></button></a>
     </div>
   </nav>
   <div class="container py-4 main-cart">
-    <div class="mb-3 mt-6 sort-list">
+    <!-- <div class="mb-3 mt-6 sort-list">
       <label for="sortBy" class="form-label">Sort By</label>
       <select class="form-select" id="sortBy" onchange="sortMeetings()">
         <option value="date-asc">A-Z</option>
         <option value="date-desc">Z-A</option>
       </select>
-    </div>
-    <h2 class="mb-4 text-center">Card List Example</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-      
-      <!-- Card 1 -->
-      <div class="col main-hover">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card 1">
-          <div class="card-body">
-            <h5 class="card-title">Card Title 1</h5>
-            <p class="card-text">This is a description of the card content. You can customize it as needed.</p>
-          </div>
-          <div class="card-footer text-center">
-            <a href="index6.html" class="btn btn-primary">ស្តាប់ការប្រជុំ</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Card 2 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card 2">
-          <div class="card-body">
-            <h5 class="card-title">Card Title 2</h5>
-            <p class="card-text">Another card description for more content and information.</p>
-          </div>
-          <div class="card-footer text-center">
-            <a href="#" class="btn btn-primary">ស្តាប់ការប្រជុំ</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card 3">
-          <div class="card-body">
-            <h5 class="card-title">Card Title 3</h5>
-            <p class="card-text">You can add more details about the card here. This card layout is flexible.</p>
-          </div>
-          <div class="card-footer text-center">
-            <a href="#" class="btn btn-primary">ស្តាប់ការប្រជុំ</a>
-          </div>
-        </div>
-      </div>
-      
-    </div>
+    </div> -->
   </div>
+    <div class="container py-5 mt-6 main-content">
+      <h2 class="text-center mb-4 text-title">ការប្រជុំតាមផ្នែកនីមួយៗ</h2>
+  
+      <!-- Box List -->
+      <div class="row g-4 mt-3 ">
+  
+        <!-- Cart 1 -->
+        <div class="col-12 col-md-6 col-lg-4 text-h5">
+          <a href=""><div class="cart-box">
+            <img src="https://i.ibb.co/9YnQQ1m/image.png" alt="Cart Item 1" class="cart-image">
+            <h5 class="cart-title">ការប្រជុំប្រចាំខែ</h5>
+            <p class="text-muted"><sub><mark>ការប្រជុំប្រចាំខែនៅការិយាល័យកណ្តាលរៀងរាល់មួយខែម្តង</mark></sub></p>
+            <button class="btn btn-primary mt-3">ចូលស្តាប់ការប្រជុំ</button>
+          </div></a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 text-h5">
+          <a href=""><div class="cart-box">
+            <img src="https://i.ibb.co/ByD1dTn/image.png" alt="Cart Item 1" class="cart-image">
+            <h5 class="cart-title">ការផ្នែកស្តុកទំនិញ ៣១៨</h5>
+            <p class="text-muted"><sub><mark>ការប្រជុំទូទៅជាមួយបុគ្គលិក ៣១៨ រៀងរាល់មួយសប្តាហ៍ម្តង</mark></sub></p>
+            <button class="btn btn-primary mt-3">ចូលស្តាប់ការប្រជុំ</button>
+          </div></a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 text-h5">
+          <a href=""><div class="cart-box">
+            <img src="https://i.ibb.co/WzdmLhT/image.png" alt="Cart Item 1" class="cart-image">
+            <h5 class="cart-title">ការប្រជុំផ្នែកស្តុកទំនិញ CH1</h5>
+            <p class="text-muted"><sub><mark>ការប្រជុំទូទៅជាមួយបុគ្គលិក CH1 រៀងរាល់មួយសប្តាហ៍ម្តង</mark></sub></p>
+            <button class="btn btn-primary mt-3">ចូលស្តាប់ការប្រជុំ</button>
+          </div></a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 text-h5">
+          <a href=""><div class="cart-box">
+            <img src="https://i.ibb.co/WFYVFcM/image.png" alt="Cart Item 1" class="cart-image">
+            <h5 class="cart-title">ការប្រជុំបុគ្គលិកកម្មករ CH1</h5>
+            <p class="text-muted"><sub><mark>ការប្រជុំទូទៅជាមួយបុគ្គលិកបុគ្គលិកកម្មករ CH1 រៀងរាល់មួយខែម្តង</mark></sub></p>
+            <button class="btn btn-primary mt-3">ចូលស្តាប់ការប្រជុំ</button>
+          </div></a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 text-h5">
+          <a href=""><div class="cart-box">
+            <img src="https://i.ibb.co/tChc8Lc/image.png" alt="Cart Item 1" class="cart-image">
+            <h5 class="cart-title">ការប្រជុំបុគ្កលិកកម្មករ​ CKD</h5>
+            <p class="text-muted"><sub><mark>ការប្រជុំទូទៅជាមួយបុគ្គលិកបុគ្គលិកកម្មករ CKD រៀងរាល់មួយខែម្តង</mark></sub></p>
+            <button class="btn btn-primary mt-3">ចូលស្តាប់ការប្រជុំ</button>
+          </div></a>
+        </div>
+       
+  
+      </div>
+    </div>
 
 
   <script>
-    document.getElementById("form").addEventListener("submit", function (e) {
-      e.preventDefault(); // Prevent the default form submission
-      document.getElementById("message").textContent = "កំពុងបញ្ជូន";
-      document.getElementById("message").style.display = "block";
-      document.getElementById("submit-button").disabled = true;
-
-      // Collect the form data
-      var formData = new FormData(this);
-      var keyValuePairs = [];
-      for (var pair of formData.entries()) {
-        keyValuePairs.push(pair[0] + "=" + pair[1]);
-      }
-
-      var formDataString = keyValuePairs.join("&");
-
-      // Send a POST request to your Google Apps Script
-      fetch(
-        "https://script.google.com/macros/s/AKfycbzO9CMMwerhl0gJLijtwZTRgKKowNu7tp2JPfrAN9oCGuJppTz5LKenim6bwFWFs_iL/exec",
-        {
-          redirect: "follow",
-          method: "POST",
-          body: formDataString,
-          headers: {
-            "Content-Type": "text/plain;charset=utf-8",
-          },
-        }
-      )
-        .then(function (response) {
-          // Check if the request was successful
-          if (response) {
-            return response; // Assuming your script returns JSON response
-          } else {
-            throw new Error("Failed to submit the form.");
-          }
-        })
-        .then(function (data) {
-          // Display a success message
-          document.getElementById("message").textContent =
-            "បានបញ្ជូនរួចរាល់";
-          document.getElementById("message").style.display = "flex";
-          document.getElementById("message").style.backgroundColor = "green";
-          document.getElementById("message").style.color = "beige";
-          document.getElementById("submit-button").disabled = false;
-          document.getElementById("form").reset();
-
-          setTimeout(function () {
-            document.getElementById("message").textContent = "";
-            document.getElementById("message").style.display = "none";
-          }, 2600);
-        })
-        .catch(function (error) {
-          // Handle errors, you can display an error message here
-          console.error(error);
-          document.getElementById("message").textContent =
-            "An error occurred while submitting the form.";
-          document.getElementById("message").style.display = "block";
-        });
-    });
     const scrollRevealOption = {
   origin: "bottom",
   distance: "10px",
@@ -256,7 +240,5 @@ textareas.forEach((textarea) => {
   });
 });
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
 </body>
 </html>
