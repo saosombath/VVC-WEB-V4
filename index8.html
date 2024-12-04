@@ -1,1 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home-meeting2</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="/node_modules/bootstrap-icons/icons/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    @media (max-width: 768px) {
+      .menu-card{
+        position: relative;
+        top: -5rem;
+      }
+      .main-menu{
+        position: relative;
+        top: -4rem;
+      }
+      .navbar-brand img{
+        text-align: center;
+        position: relative;
+        left: 40%;
+        align-items: center;
+      }
+
+      .mes{
+        width: 5%;
+        position: relative;
+        left: 0;
+        top: 5rem;
+      }
+    }
+    /* computer */
+    .main-menu{
+      top: 3rem;
+      position: relative;
+    }
+    .navbar-custom {
+      background-color: #050049;
+      position: fixed;
+    }
+
+    .menu-icon {
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      height: 80px;
+      bottom: 0;
+      width: 100%;
+    }
+    .navbar-brand img{
+      text-decoration: none;
+      width: 200px;
+      text-align: center;
+      align-items: center;
+      position: relative;
+    }
+    .navbar-toggler{
+      background: none;
+    }
+
+    .bottom-menu a {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+    .btn{
+      color: white;
+    }
+    .main-cart{
+      position: relative;
+      align-items: center;
+      text-align: center;
+      top: 5rem;
+    }
+    .card-footer{
+      position: relative;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+    .sort-list{
+      position: relative;
+      top: -1rem;
+    }
+    .form-label{
+      position: relative;
+      justify-content: start;
+    }
+    .cart-box {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      background: #f9f9f9;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    .cart-box:hover {
+      transform: translateY(-5px);
+    }
+    .cart-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .cart-title{
+      font-size: 1.1rem;
+      margin: 12px 0;
+      color: blue;
+      font-family: Kh Muol;
+    }
+    .text-title{
+      font-family: Kh Muol;
+      color: blue;
+    }
+    .text-h5 a{
+      text-decoration: none;
+    }
+    .menu-list {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 12px 20px;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    .menu-list:hover{
+      transform: translateY(-5px);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .menu-list img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .menu-list span {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #333;
+      flex-grow: 1;
+      margin-left: 15px;
+    }
+    .main-list-meeting{
+      font-family: Kh Battambang;
+    }
+    .txt-date{
+      color: gold;
+      font-size: 11px;
+    }
+    .txt-main-content{
+      color: rgb(0, 0, 63);
+    }
+    .chevron-right{
+      color: blue;
+      font-size: 20px;
+    }
+    #meetingList a{
+      text-decoration: none;
+    }
+    .main-header{
+      position: relative;
+      top: 7.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom shadow-lg mb-5">
+    <div class="container-fluid text-decoration-none">
+      <a href="index1.html"><span class="navbar-brand text-white text-decoration-none"><img src="https://i.ibb.co/HTksMQd/Logo-Van-Van-2.png" alt=""></span></a>
+    </button>
+    <a href="index1.html"><button id="logout"><i class="fa-solid fa-right-from-bracket"></i></button></a>
+  </div>
+</nav>
+<div class="main-header">
+  <div class="container mt-3 main-list-meeting">
+    <div class="mb-3">
+      <label for="sortBy" class="form-label">Sort By</label>
+      <select class="form-select" id="sortBy" onchange="sortMeetings()">
+        <option value="date-asc">A-Z</option>
+        <option value="date-desc">Z-A</option>
+      </select>
+    </div>
+  <ul class="list-group" id="meetingList">
+    <a href=""><li class="list-group-item " data-date="02" data-participants="50">
+  <div class="menu-list">
+    <span class="fs-6">01 - ការប្រជុំប្រចាំខែនៅការិយាល័យកណ្តាល<br><p class="mt-2 txt-date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“ ថ្ងៃពុធ ៤កើត ខែមិគសិរ ឆ្នាំរោង ឆស័ក ព.ស ២៥៦៨ ”<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“ ត្រូវនឹង ថ្ងៃទី៤ ខែធ្នូ ឆ្នាំ២០២៤ ”</p></span>
+    <div class="chevron-right">
+    <i class="bi bi-chevron-right"></i>
+      </div>
+    </div>
+   </li>
+  </a>
+  <a href=""><li class="list-group list-group-item mt-2" data-date="02" data-participants="50">
+  <div class="menu-list">
+    <span class="fs-6">02 - ការប្រជុំប្រចាំខែនៅការិយាល័យកណ្តាល<br><p class="mt-2 txt-date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“ ថ្ងៃពុធ ៤កើត ខែមិគសិរ ឆ្នាំរោង ឆស័ក ព.ស ២៥៦៨ ”<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“ ត្រូវនឹង ថ្ងៃទី៤ ខែធ្នូ ឆ្នាំ២០២៤ ”</p></span>
+    <div class="chevron-right">
+    <i class="bi bi-chevron-right"></i>
+  </div>
+  </div>
+</li>
+</a>
+<a href=""><li class="list-group list-group-item mt-2" data-date="03" data-participants="50">
+  <div class="menu-list">
+    <span class="fs-6">03 - ការប្រជុំប្រចាំខែនៅការិយាល័យកណ្តាល<br><p class="mt-2 txt-date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“ ថ្ងៃចន្ទ ២កើត ខែមិគសិរ ឆ្នាំរោង ឆស័ក ព.ស ២៥៦៨ ”<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“ ត្រូវនឹង ថ្ងៃទី២ ខែធ្នូ ឆ្នាំ២០២៤ ”</p></span>
+    <div class="chevron-right">
+    <i class="bi bi-chevron-right"></i>
+  </div>
+  </div>
+</li>
+</a>
+</div>
+</ul>
+</div>
+
+
+
+
+  <script>
+   function sortMeetings() {
+    const meetingList = document.getElementById('meetingList');
+    const meetings = Array.from(meetingList.getElementsByClassName('list-group-item'));
+    const sortBy = document.getElementById('sortBy').value;
+
+    // Sort meetings based on selected criteria
+    if (sortBy === 'date-asc') {
+      meetings.sort((a, b) => new Date(a.getAttribute('data-date')) - new Date(b.getAttribute('data-date')));
+    } else if (sortBy === 'date-desc') {
+      meetings.sort((a, b) => new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date')));
+    } else if (sortBy === 'participants-asc') {
+      meetings.sort((a, b) => parseInt(a.getAttribute('data-participants')) - parseInt(b.getAttribute('data-participants')));
+    } else if (sortBy === 'participants-desc') {
+      meetings.sort((a, b) => parseInt(b.getAttribute('data-participants')) - parseInt(a.getAttribute('data-participants')));
+    }
+
+    // Clear the current list and append sorted meetings
+    meetingList.innerHTML = '';
+    meetings.forEach(meeting => meetingList.appendChild(meeting));
+  }
+    const scrollRevealOption = {
+  origin: "bottom",
+  distance: "10px",
+  duration: 1000,
+};
+
+ScrollReveal().reveal(".navbar", {
+  ...scrollRevealOption,
+  origin: "bottom",
+});
+ScrollReveal().reveal(".daily-report", {
+  ...scrollRevealOption,
+  delay: 400,
+});
+ScrollReveal().reveal("#form", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+ScrollReveal().reveal(".f-boks", {
+  ...scrollRevealOption,
+  delay: 700,
+});
+const textareas = document.querySelectorAll('textarea');
+
+textareas.forEach((textarea) => {
+  textarea.addEventListener('input', () => {
+    textarea.style.height = 'auto'; // Reset height
+    textarea.style.height = textarea.scrollHeight + 'px'; // Adjust height
+  });
+});
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+</body>
+</html>
 
