@@ -557,6 +557,16 @@
         #submit-button:hover {
             background: #000000;
         }
+            .main-table iframe{
+        width: 100%;
+        background-color: antiquewhite;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+        top: 8rem;
+        position: relative;
+        /* left: 15%; */
+        height: 440px;
+    }
     </style>
 </head>
 <body>
@@ -674,17 +684,16 @@
 </div>
 </div>
 
-<!-- <div id="page-2" class="page">
-    <h1>Page 2</h1>
-    <p>This is the content of Page 2.</p>
-    <button onclick="goBack()">Go Back</button>
+<div id="page-2" class="page">
+    <div class="main-table justity-content-center container">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRvCxCZtNt0bKwaX6cqmUbJoLgeaUlwDRAQqd1ANKHdG3fmtCcRTfLB5UuJvf6owssax_8TbNmP38BB/pubhtml?widget=true&amp;headers=false"></iframe></div>
 </div>
 
 <div id="page-3" class="page">
     <h1>Page 3</h1>
     <p>This is the content of Page 3.</p>
     <button onclick="goBack()">Go Back</button>
-</div> -->
+</div>
 
 <script>
     document.getElementById("form").addEventListener("submit", function (e) {
