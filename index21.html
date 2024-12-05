@@ -358,7 +358,6 @@
 
     .list-group-item {
       display: flex;
-      align-items: center;
       font-size: 1.2rem;
     }
 
@@ -503,7 +502,6 @@
 }
                 .form-container {
             background: #fff;
-            align-items: center;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             padding: 20px 30px;
@@ -562,6 +560,9 @@
         /* left: 15%; */
         height: 440px;
     }
+    .form-group{
+        text-align: left;
+    }
     </style>
 </head>
 <body>
@@ -600,9 +601,9 @@
 </div>
 <!--   page 1   -->
 <div id="page-1" class="page">
-<div class="form-container">
+<div class="form-container container">
         <h2>Meeting Registration</h2>
-        <form id="form" onsubmit=" return sender()" class="container" method="POST">
+        <form id="form" onsubmit=" return sender()"  method="POST">
             <div class="form-group">
                 <label for="name">អត្តលេខ</label>
                 <input type="text" id="name" name="អត្តលេខ"  required>
