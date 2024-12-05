@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>meeting_office</title>
+    <title>list-registration-form </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style1.css">
@@ -504,6 +504,57 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+                .form-container {
+            background: #fff;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 30px;
+            max-width: 400px;
+            width: 100%;
+            font-family: kh battambang;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input, 
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        #submit-button {
+            width: 100%;
+            padding: 10px;
+            background: #06003a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #submit-button:hover {
+            background: #000000;
+        }
     </style>
 </head>
 <body>
@@ -529,7 +580,17 @@
         <a href="#" data-page="1">
          <li class="list-group-item1 " data-date="02" data-participants="50">
             <div class="menu-list1">
-              <span class="fs-6">01 - ការប្រជុំប្រចាំខែការិយាល័យកណ្តាល<br><p class="mt-2 txt-date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“ ថ្ងៃពុធ ៤កើត ខែមិគសិរ ឆ្នាំរោង ឆស័ក ព.ស ២៥៦៨ ”<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“ ត្រូវនឹង ថ្ងៃទី៤ ខែធ្នូ ឆ្នាំ២០២៤ ”</p></span>
+              <span class="fs-6">ចុះឈ្មោះចូលរូមប្រជុំ</span>
+              <div class="chevron-right">
+              <i class="bi bi-chevron-right"></i>
+                </div>
+              </div>
+             </li>
+            </a>
+        <a href="#" data-page="2">
+         <li class="list-group-item1 " data-date="02" data-participants="50">
+            <div class="menu-list1">
+              <span class="fs-6">បញ្ជីចុះឈ្មោះចូលរូមប្រជុំ</span>
               <div class="chevron-right">
               <i class="bi bi-chevron-right"></i>
                 </div>
@@ -541,25 +602,73 @@
 </div>
 <!--   page 1   -->
 <div id="page-1" class="page">
-  <div class="container mt-5">
-  <li class="list-group-item1 d-block justify-content-between align-items-center text-center meeting-card" data-date="1" data-participants="50">
-    <div class="text-center">
-      <h6 class="mt-5"><strong></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ថ្ងៃពុធ ៤កើត ខែមិគសិរ ឆ្នាំរោង ឆស័ក ព.ស ២៥៦៨<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ត្រូវនឹង ថ្ងៃទី៤ ខែធ្នូ ឆ្នាំ២០២៤</h6>
-        <strong class="mt-4">របៀបវារៈប្រជុំ</strong>
-      <div class="mt-3">
-          <img src="https://i.ibb.co/23tCPW7/image.png" alt="Meeting Image">
-      </div>
-        <strong class="mt-2">រូបភាពប្រជុំ</strong>
-      <div class="mt-3">
-          <img src="https://i.ibb.co/RHRPD8z/image.png" alt="Meeting Image">
-      </div>
+<div class="form-container container">
+        <h2>Meeting Registration</h2>
+        <form id="form" onsubmit=" return sender()" class="container" method="POST">
+            <div class="form-group">
+                <label for="name">អត្តលេខ</label>
+                <input type="text" id="name" name="អត្តលេខ"  required>
+            </div>
+            <div class="form-group">
+                <label for="email">ឈ្មោះ</label>
+                <input type="text" id="email" name="ឈ្មោះ"  required>
+                <span class="error-message" id="emailError"></span>
+            </div>
+            <div class="form-group">
+              <label class="label mt-6 text">ភេទ</label>
+                <select class="label mt-2 drop" name="ភេទ" id="typeofrequest" required>
+                  <option value="">សូមជ្រើសរើស</option>
+                  <option value="ប្រុស">ប្រុស</option>
+                  <option value="ស្រី">ស្រី</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">ថ្ងៃខែឆ្នាំ</label>
+                <input type="date" id="date" name="ថ្ងៃខែឆ្នាំ" required>
+            </div>
+            <div class="form-group">
+                <label for="date">ម៉ោងប្រជុំ</label>
+                <input type="date" id="date" name="ម៉ោងប្រជុំ" required>
+            </div>
+            <div class="form-group">
+              <label class="label mt-6 text">ទីតាំង</label>
+                <select class="label mt-2 drop" name="ទីតាំងប្រជុំ" id="typeofrequest" required>
+                  <option value="">សូមជ្រើសរើស</option>
+                  <option value="ការិយាល័យកណ្តាល">ការិយាល័យកណ្តាល</option>
+                  <option value="ឃ្លាំង CH1">ឃ្លាំង CH1</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <label class="label mt-6 text">ប្រភេទនៃការប្រជុំ</label>
+                <select class="label mt-2 drop" name="ប្រភេទនៃការប្រជុំ" id="typeofrequest" required>
+                  <option value="">សូមជ្រើសរើស</option>
+                  <option value="ការប្រជុំប្រចាំខែ">ការប្រជុំប្រចាំខែ</option>
+                  <option value="ការប្រជុំផ្នែកស្តុក CH1">ការប្រជុំផ្នែកស្តុក CH1</option>
+                  <option value="ការប្រជុំផ្នែកស្តុក 318">ការប្រជុំផ្នែកស្តុក 318</option>
+                  <option value="ការប្រជុំបុគ្គលិកផ្នែកបើក CH1">ការប្រជុំបុគ្គលិកផ្នែកបើក CH1</option>
+                </select>
+              </div>
+            <button type="submit" id="submit-button">ចុចឈ្មោះ</button>
+        </form>
+        <div
+        id="message"
+        style="
+          display: none;
+          position: relative;
+          margin: 20px;
+          top: -3.7rem;
+          width: 60%;
+          left: 6rem;
+          font-weight: bold;
+          color: green;
+          padding: 8px;
+          background-color: beige;
+          border-radius: 4px;
+          border-color: aquamarine;
+        "
+      >
     </div>
-    <div class="audio-player text-center justify-content-center mt-6" id="audioPlayer">
-      <button id="playButton" class="btn btn-primary play-button text-center" onclick="playAudio()">សំឡេងប្រជុំ</button>
-        <iframe src="https://drive.google.com/file/d/1yQTudjRgY4VN2E4ZsitAxNdv7yrcKGbH/preview" style="background: none; border: none;"></iframe>
-      </div>
-  </li>
-</div>
+    </div>
 </div>
 </div>
 
@@ -576,6 +685,65 @@
 </div>
 
 <script>
+    document.getElementById("form").addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent the default form submission
+      document.getElementById("message").textContent = "កំពុងបញ្ជូន";
+      document.getElementById("message").style.display = "block";
+      document.getElementById("submit-button").disabled = true;
+
+      // Collect the form data
+      var formData = new FormData(this);
+      var keyValuePairs = [];
+      for (var pair of formData.entries()) {
+        keyValuePairs.push(pair[0] + "=" + pair[1]);
+      }
+
+      var formDataString = keyValuePairs.join("&");
+
+      // Send a POST request to your Google Apps Script
+      fetch(
+        "https://script.google.com/macros/s/AKfycbxzgSA2Fs9_BfYDC0kYf6zfLMMP45ZFT0ZfvKWgtCf6LLEczRl9qEGOAi3hCTVRwcGK/exec",
+        
+        {
+          redirect: "follow",
+          method: "POST",
+          body: formDataString,
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8",
+          },
+        }
+      )
+        .then(function (response) {
+          // Check if the request was successful
+          if (response) {
+            return response; // Assuming your script returns JSON response
+          } else {
+            throw new Error("Failed to submit the form.");
+          }
+        })
+        .then(function (data) {
+          // Display a success message
+          document.getElementById("message").textContent =
+            "បានបញ្ជូនរួចរាល់";
+          document.getElementById("message").style.display = "block";
+          document.getElementById("message").style.backgroundColor = "green";
+          document.getElementById("message").style.color = "beige";
+          document.getElementById("submit-button").disabled = false;
+          document.getElementById("form").reset();
+
+          setTimeout(function () {
+            document.getElementById("message").textContent = "";
+            document.getElementById("message").style.display = "none";
+          }, 2600);
+        })
+        .catch(function (error) {
+          // Handle errors, you can display an error message here
+          console.error(error);
+          document.getElementById("message").textContent =
+            "An error occurred while submitting the form.";
+          document.getElementById("message").style.display = "block";
+        });
+    });
     // Function to show a specific page and hide the main page
     function showPage(pageId) {
         document.getElementById('main').style.display = 'none'; // Hide main page
